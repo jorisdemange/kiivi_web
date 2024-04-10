@@ -1159,12 +1159,20 @@
   };
   onvisible.add("#text01", {
     style: "fade-left",
-    speed: 1000,
+    speed: 1200,
     intensity: 2,
     threshold: 3,
     delay: 0,
     stagger: 125,
     staggerSelector: ":scope > *",
+    replay: false,
+  });
+  onvisible.add("#kiivi-logotype", {
+    style: "fade-left",
+    speed: 1000,
+    intensity: 3,
+    threshold: 1,
+    delay: 0,
     replay: false,
   });
   onvisible.add("#text32", {
@@ -1179,6 +1187,14 @@
     style: "fade-right",
     speed: 1000,
     intensity: 1,
+    threshold: 3,
+    delay: 0,
+    replay: false,
+  });
+  onvisible.add("#open-privacy", {
+    style: "fade-right",
+    speed: 1000,
+    intensity: 4,
     threshold: 3,
     delay: 0,
     replay: false,
