@@ -776,6 +776,10 @@ p spoiler-text {
   border-bottom-right-radius: inherit;
 }
 
+#kiivi-logotype {
+  width: 12rem;
+}
+
 #image02 .frame {
   width: 100vw;
   border-color: #ffffff;
