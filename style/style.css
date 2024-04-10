@@ -239,7 +239,7 @@ u {
 
 strong {
   color: inherit;
-  font-weight: bolder;
+  font-weight: 500;
 }
 
 em {
@@ -646,7 +646,7 @@ p spoiler-text {
   width: auto;
   height: 3.5rem;
   line-height: 3.5rem;
-  padding: 0 1.75rem;
+  padding: 0;
   vertical-align: middle;
   font-family: "Rubik", sans-serif;
   font-size: 1.125em;
@@ -656,6 +656,10 @@ p spoiler-text {
   justify-content: flex-end;
   transition: transform 0.25s ease, color 0.25s ease,
     background-color 0.25s ease, border-color 0.25s ease;
+}
+
+#buttons05 li a img {
+  height: 100%;
 }
 
 #buttons05 li a svg {
@@ -678,23 +682,6 @@ p spoiler-text {
   flex-shrink: 1;
   text-align: left;
   width: 100%;
-}
-
-#buttons05 .button {
-  background-color: #d7fa33;
-  color: #000000;
-  background-image: linear-gradient(
-    45deg,
-    #52bf1d 44%,
-    rgba(215, 250, 51, 0.008) 100%
-  );
-  background-position: 0% 0%;
-  background-repeat: repeat;
-  background-size: cover;
-}
-
-#buttons05 .button:hover {
-  background-color: #d7fa33 !important;
 }
 
 #buttons05 li a:hover {
