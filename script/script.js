@@ -1200,3 +1200,42 @@
     replay: false,
   });
 })();
+
+/*---------------------------------------------- 
+Privacy policy modal
+------------------------------------------------*/
+
+/* Fetch policy text*/
+const policyContainer = document.getElementById('policy-content');
+
+function fetchPolicyText() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'assets/policy.txt', true);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      policyContainer.textContent = xhr.responseText;
+    } else {
+      policyContainer.textContent = 'Error fetching policy text.';
+    }
+  };
+  xhr.send();
+}
+
+fetchPolicyText();
+
+/* Handle modal*/
+
+const openBtn = document.getElementById('open-privacy');
+const policy = document.querySelector('.policy');
+const closeBtn = document.getElementById('close-privacy');
+
+openBtn.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default link behavior
+  policy.classList.remove('policy--hidden'); // Show the modal
+});
+
+closeBtn.addEventListener('click', () => {
+  policy.classList.add('policy--hidden'); // Hide the modal
+});
+
+
