@@ -1239,14 +1239,13 @@ function fetchPolicyText() {
 
 fetchPolicyText();
 
-/* Handle modal*/
+/* Handle policy modal*/
 
 const openBtn = document.getElementById('open-privacy');
 const policy = document.querySelector('.policy');
 const closeBtn = document.getElementById('close-privacy');
 
 openBtn.addEventListener('click', (event) => {
-  event.preventDefault(); // Prevent default link behavior
   policy.classList.remove('policy--hidden'); // Show the modal
 });
 
@@ -1254,4 +1253,11 @@ closeBtn.addEventListener('click', () => {
   policy.classList.add('policy--hidden'); // Hide the modal
 });
 
+/* Handle hash fragments in URL*/
 
+const hash = window.location.hash;
+const policyElement = document.getElementById('privacy-policy');
+
+if (hash === '#privacy-policy') {
+  policy.classList.remove('policy--hidden'); // Show the modal
+}
