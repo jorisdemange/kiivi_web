@@ -89,28 +89,17 @@
       <pre class="dialog">
         <h2>Give us some feedback!</h2>
         <form name="contact" method="POST" data-netlify="true">
-          <p>
-            <label>Your Name: <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <label>Your Role: <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
+          <label for="name">Name (Optional):</label>
+          <input type="text" id="name" name="name">
+          <br>
+          <label for="feedback">Your Feedback:</label>
+          <textarea id="feedback" name="feedback" rows="5" cols="30" required></textarea>
+          <br>
+          <div class="action-wrapper">
+            <a href="#" class="modalCloseBtn" >Close</a>
+            <button type="submit" class="btn--green">Submit Feedback</button>
+          </div>
         </form>
-        <nav>
-          <a href="#" class="modalCloseBtn" >Close</a>
-        </nav>
       </pre>
     </div>
 
