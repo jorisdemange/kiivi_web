@@ -1170,7 +1170,7 @@
   onvisible.add("#kiivi-logotype", {
     style: "fade-left",
     speed: 1000,
-    intensity: 3,
+    intensity: 6,
     threshold: 1,
     delay: 0,
     replay: false,
@@ -1191,7 +1191,8 @@
     delay: 0,
     replay: false,
   });
-  onvisible.add("#open-privacy", {
+  
+  onvisible.add("#buttons05", {
     style: "fade-right",
     speed: 1000,
     intensity: 4,
@@ -1199,10 +1200,10 @@
     delay: 0,
     replay: false,
   });
-  onvisible.add("#buttons05", {
+  onvisible.add("#modal-links", {
     style: "fade-right",
     speed: 1000,
-    intensity: 4,
+    intensity: 6,
     threshold: 3,
     delay: 0,
     replay: false,
@@ -1221,43 +1222,45 @@
 Privacy policy modal
 ------------------------------------------------*/
 
-/* Fetch policy text*/
-const policyContainer = document.getElementById('policy-content');
 
-function fetchPolicyText() {
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'assets/policy.txt', true);
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      policyContainer.textContent = xhr.responseText;
-    } else {
-      policyContainer.textContent = 'Error fetching policy text.';
-    }
-  };
-  xhr.send();
-}
+/* Handle privacy policy modal*/
 
-fetchPolicyText();
+const privacy = document.getElementById('privacy-policy');
+const privacyOpenBtn = document.getElementById('open-privacy');
+const privacyCloseBtn = privacy.querySelector('.modalCloseBtn');
 
-/* Handle policy modal*/
-
-const openBtn = document.getElementById('open-privacy');
-const policy = document.querySelector('.policy');
-const closeBtn = document.getElementById('close-privacy');
-
-openBtn.addEventListener('click', (event) => {
-  policy.classList.remove('policy--hidden'); // Show the modal
+privacyOpenBtn.addEventListener('click', (event) => {
+  privacy.classList.remove('modal--hidden'); // Show the modal
 });
 
-closeBtn.addEventListener('click', () => {
-  policy.classList.add('policy--hidden'); // Hide the modal
+privacyCloseBtn.addEventListener('click', () => {
+  privacy.classList.add('modal--hidden'); // Hide the modal
+});
+
+
+/* Handle feedback modal*/
+
+const feedback = document.getElementById('feedback-form');
+const feedbackOpenBtn = document.getElementById('open-feedback');
+const feedbackCloseBtn = feedback.querySelector('.modalCloseBtn');
+
+feedbackOpenBtn.addEventListener('click', (event) => {
+  feedback.classList.remove('modal--hidden'); // Show the modal
+});
+
+feedbackCloseBtn.addEventListener('click', () => {
+  feedback.classList.add('modal--hidden'); // Hide the modal
 });
 
 /* Handle hash fragments in URL*/
 
 const hash = window.location.hash;
-const policyElement = document.getElementById('privacy-policy');
 
 if (hash === '#privacy-policy') {
-  policy.classList.remove('policy--hidden'); // Show the modal
+  privacy.classList.remove('modal--hidden'); // Show the modal
 }
+
+if (hash === '#feedback-form') {
+  feedback.classList.remove('modal--hidden'); // Show the modal
+}
+

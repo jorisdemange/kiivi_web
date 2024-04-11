@@ -55,13 +55,23 @@
       </symbol>
     </svg>
 
-    <div id="privacy-policy" class="policy policy--hidden">
+    <div id="privacy-policy" class="policy modal modal--hidden">
       <div class="overlay"></div>
       <pre class="dialog">
         <h2>Privacy policy</h2>
-        <div id="policy-content"></div>
+        <zero-md src="assets/privacy-policy.md" id="policy-content"></zero-md>
         <nav>
-          <a id="close-privacy" href="#" title="click to continue" class="btn" >Close</a>
+          <a href="#" title="click to continue" class="modalCloseBtn" >Close</a>
+        </nav>
+      </pre>
+    </div>
+
+    <div id="feedback-form" class="feedback modal modal--hidden">
+      <div class="overlay"></div>
+      <pre class="dialog">
+        <h2>Give us some feedback!</h2>
+        <nav>
+          <a href="#" title="click to continue" class="modalCloseBtn" >Close</a>
         </nav>
       </pre>
     </div>
