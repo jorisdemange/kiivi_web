@@ -59,9 +59,20 @@
       <div class="overlay"></div>
       <pre class="dialog">
         <h2>Privacy policy</h2>
-        <zero-md src="assets/privacy-policy.md" id="policy-content"></zero-md>
+        <zero-md src="assets/privacy-policy.md" class="md-wrapper"></zero-md>
         <nav>
-          <a href="#" title="click to continue" class="modalCloseBtn" >Close</a>
+          <a href="#" class="modalCloseBtn" >Close</a>
+        </nav>
+      </pre>
+    </div>
+
+    <div id="terms-conditions" class="conditions modal modal--hidden">
+      <div class="overlay"></div>
+      <pre class="dialog">
+        <h2>Terms and conditions</h2>
+        <zero-md src="assets/terms-conditions.md" class="md-wrapper"></zero-md>
+        <nav>
+          <a href="#" class="modalCloseBtn" >Close</a>
         </nav>
       </pre>
     </div>
@@ -71,7 +82,7 @@
       <pre class="dialog">
         <h2>Give us some feedback!</h2>
         <nav>
-          <a href="#" title="click to continue" class="modalCloseBtn" >Close</a>
+          <a href="#" class="modalCloseBtn" >Close</a>
         </nav>
       </pre>
     </div>
@@ -132,6 +143,12 @@
                   <ul id="modal-links" class="links">
                     <li>
                       <a href="#privacy-policy" id="open-privacy"> Privacy policy</a>
+                    </li>
+                    <li>
+                      <a href="#terms-conditions" id="open-conditions"> Terms & conditions</a>
+                    </li>
+                    <li>
+                      <a href="#feedback-form" id="open-feedback">&#129303; Give feedback</a>
                     </li>
                   </ul>
                 </div>

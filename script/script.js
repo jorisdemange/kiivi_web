@@ -1237,6 +1237,19 @@ privacyCloseBtn.addEventListener('click', () => {
   privacy.classList.add('modal--hidden'); // Hide the modal
 });
 
+/* Handle privacy policy modal*/
+
+const conditions = document.getElementById('terms-conditions');
+const conditionsOpenBtn = document.getElementById('open-conditions');
+const conditionsCloseBtn = conditions.querySelector('.modalCloseBtn');
+
+conditionsOpenBtn.addEventListener('click', (event) => {
+  conditions.classList.remove('modal--hidden'); // Show the modal
+});
+
+conditionsCloseBtn.addEventListener('click', () => {
+  conditions.classList.add('modal--hidden'); // Hide the modal
+});
 
 /* Handle feedback modal*/
 
@@ -1262,5 +1275,9 @@ if (hash === '#privacy-policy') {
 
 if (hash === '#feedback-form') {
   feedback.classList.remove('modal--hidden'); // Show the modal
+}
+
+if (hash === '#terms-conditions') {
+  conditions.classList.remove('modal--hidden'); // Show the modal
 }
 

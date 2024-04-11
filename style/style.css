@@ -1388,7 +1388,7 @@ Modals
 
 /* Privacy policy */
 
-#policy-content {
+.modal .md-wrapper {
   height: 100%;
   width: 100%;
   white-space: pre-wrap;
