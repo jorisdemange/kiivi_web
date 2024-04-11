@@ -10,33 +10,28 @@
       name="description"
       content="Save time planning meals with Kiivi, the AI-powered app that creates personalized plans in minutes! Perfect for busy families and home chefs. Download Kiivi and eat healthy, stress-free!"
     />
-    <meta
-      property="og:site_name"
-      content="Kiivi | find recipes, faster than ever"
-    />
-    <meta
-      property="og:title"
-      content="Kiivi | find recipes, faster than ever"
-    />
+    <meta property="og:site_name" content="Kiivi | find recipes, faster than ever" />
+    <meta property="og:title" content="Kiivi | find recipes, faster than ever" />
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
       content="Save time planning meals with Kiivi, the AI-powered app that creates personalized plans in minutes! Perfect for busy families and home chefs. Download Kiivi and eat healthy, stress-free!"
     />
-    <meta
-      property="og:image"
-      content="https://kiivi.carrd.co/assets/images/card.jpg?v=650df563"
-    />
+    <meta property="og:image" content="https://kiivi.carrd.co/assets/images/card.jpg?v=650df563" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="800" />
     <meta property="og:url" content="https://kiivi.app" />
     <meta property="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://kiivi.app" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="is-loading">
     <svg
@@ -81,12 +76,32 @@
       <div class="overlay"></div>
       <pre class="dialog">
         <h2>Give us some feedback!</h2>
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>Your Name: <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <label>Your Role: <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
         <nav>
           <a href="#" class="modalCloseBtn" >Close</a>
         </nav>
       </pre>
     </div>
-    
+
     <div id="wrapper">
       <div id="main">
         <div class="inner">
@@ -94,11 +109,7 @@
             <div class="wrapper">
               <div class="inner">
                 <div>
-                  <img
-                    src="assets/kiivi-logotype.svg"
-                    alt="Kiivi meal planning app logo"
-                    id="kiivi-logotype"
-                  />
+                  <img src="assets/kiivi-logotype.svg" alt="Kiivi meal planning app logo" id="kiivi-logotype" />
                   <h2 class="pitch" id="text32">
                     <span class="p">
                       <em
@@ -110,29 +121,21 @@
                   <p class="description" id="text29">
                     <span class="p"
                       >Struggling to find <strong>healthy recipes</strong> and
-                      <strong>plan meals for your busy family</strong>? Kiivi is
-                      the <strong>AI-powered meal planning app</strong> that
-                      takes the stress out of cooking.</span
+                      <strong>plan meals for your busy family</strong>? Kiivi is the
+                      <strong>AI-powered meal planning app</strong> that takes the stress out of cooking.</span
                     >
                     <span class="p"
                       >Kiivi considers your preferences, dietary needs, and
-                      <strong>ingredients you already have</strong> on hand. In
-                      just seconds, Kiivi creates
+                      <strong>ingredients you already have</strong> on hand. In just seconds, Kiivi creates
                       <strong>personalized meal plans</strong> with delicious
                       <strong>recipes made just for you</strong>.</span
                     >
-                    <span class="p"
-                      >Download Kiivi today, your perfect
-                      <strong>home chef assistant</strong>!</span
-                    >
+                    <span class="p">Download Kiivi today, your perfect <strong>home chef assistant</strong>!</span>
                   </p>
 
                   <ul id="buttons05" class="buttons">
                     <li>
-                      <a
-                        href="#"
-                        class="button"
-                      >
+                      <a href="#" class="button">
                         <img
                           src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
                           alt="Download Kiivi on the App Store"
@@ -172,6 +175,5 @@
 
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     <script src="script/script.js"></script>
-    
   </body>
 </html>
