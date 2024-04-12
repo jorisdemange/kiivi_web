@@ -1390,6 +1390,7 @@ Modals
 
 .modal .md-wrapper {
   height: 100%;
+  max-height: calc(100vh - 80px);
   width: 100%;
   white-space: pre-wrap;
   overflow: auto;
@@ -1400,12 +1401,10 @@ Modals
 /* Feedback form */
 
 .btn--green {
-  background-color: #D7FA33;
-  color: #000000;
-  background-image: linear-gradient(45deg, #52BF1D 44%, rgba(215, 250, 51, 0.008) 100%);
-  background-position: 0% 0%;
-  background-repeat: repeat;
-  background-size: cover;
+  cursor: pointer;
+  color: #232323;
+  background: linear-gradient(45deg, #52BF1D 44%, #D7FA33 100%);
+  background-position-x: 0%;
   letter-spacing: 0rem;
   font-size: 1.125em;
   display: inline-flex;
@@ -1418,13 +1417,44 @@ Modals
   font-size: 1.125em;
   font-weight: 500;
   border-radius: 0.625rem;
+  border: none;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  transition: background-color 0.2s ease;
+}
+.btn--green:hover {
+  background: linear-gradient(45deg, #52BF1D 35%, #D7FA33 100%);
+}
+
+.btn--text {
+  cursor: pointer;
+  color: #232323;
+  background-color: #ffffff00;
+  letter-spacing: 0rem;
+  font-size: 1.125em;
+  display: inline-flex;
+  width: auto;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  padding: 0 1.75rem;
+  vertical-align: middle;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  border-radius: 0.625rem;
+  border: none;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  transition: background-color 0.5s ease;
+}
+.btn--text:hover {
+  background-color: #efefef;
 }
 
 #feedback-form .dialog {
   width: auto;
+  height: auto;
+  padding: 2.5em 3em;
 }
 
 #feedback-form form {
@@ -1439,6 +1469,11 @@ Modals
   font-weight: 500;
   font-size: 1.25em;
   color: #473a33;
+}
+
+#feedback-form label .mini {
+  font-weight: normal;
+  font-size: 0.6em;
 }
 
 #feedback-form input[type="text"], textarea {
@@ -1456,6 +1491,7 @@ Modals
 #feedback-form .action-wrapper {
   display: flex;
   justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 /*---------------------------------------------- 

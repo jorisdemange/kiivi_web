@@ -89,15 +89,15 @@
       <pre class="dialog">
         <h2>Give us some feedback!</h2>
         <form name="contact" method="POST" data-netlify="true">
-          <label for="name">Name (Optional):</label>
-          <input type="text" id="name" name="name">
-          <br>
-          <label for="feedback">Your Feedback:</label>
-          <textarea id="feedback" name="feedback" rows="5" cols="30" required></textarea>
-          <br>
+          <label for="name">Name <span class="mini">(Optional)</span></label>
+          <input type="text" name="name">
+          <label for="email">Email <span class="mini">(Optional)</span></label>
+          <input type="text" name="email">
+          <label for="feedback">Your Feedback</label>
+          <textarea name="feedback" rows="5" cols="30" required></textarea>
           <div class="action-wrapper">
-            <a href="#" class="modalCloseBtn" >Close</a>
-            <button type="submit" class="btn--green">Submit Feedback</button>
+            <button class="modalCloseBtn btn--text" >Close</button>
+            <button type="submit" class="btn--green">Submit</button>
           </div>
         </form>
       </pre>
