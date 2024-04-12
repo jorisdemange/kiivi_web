@@ -1167,7 +1167,7 @@
     staggerSelector: ":scope > *",
     replay: false,
   });
-  onvisible.add("#kiivi-logotype", {
+  onvisible.add(".logo-lang", {
     style: "fade-left",
     speed: 1000,
     intensity: 6,
