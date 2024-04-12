@@ -1085,7 +1085,6 @@ h2 span.p:nth-child(n + 2) {
   }
 
   #modal-links {
-    gap: 0.5rem;
     font-size: 1.125em;
   }
 
