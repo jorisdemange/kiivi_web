@@ -562,6 +562,7 @@ h2 {
   font-size: 2.625em;
   line-height: 1.25;
   font-weight: 400;
+  text-wrap: initial;
 }
 
 h2.pitch {
@@ -1233,8 +1234,11 @@ h2 span.p:nth-child(n + 2) {
     width: 100% !important;
   }
 
-  .policy .dialog {
+  .dialog {
     padding: 30px !important;
+  }
+  #feedback-form .dialog {
+    max-width: calc(100vw - 80px);
   }
 }
 
