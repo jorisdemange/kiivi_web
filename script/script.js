@@ -1219,65 +1219,88 @@
 })();
 
 /*---------------------------------------------- 
-Privacy policy modal
+Modals
 ------------------------------------------------*/
 
+// Get modal elements
+const modals = {
+  privacy: document.getElementById('privacy-policy'),
+  conditions: document.getElementById('terms-conditions'),
+  feedback: document.getElementById('feedback-form'),
+};
 
-/* Handle privacy policy modal*/
+const openBtns = {
+  privacy: document.getElementById('open-privacy'),
+  conditions: document.getElementById('open-conditions'),
+  feedback: document.getElementById('open-feedback'),
+};
 
-const privacy = document.getElementById('privacy-policy');
-const privacyOpenBtn = document.getElementById('open-privacy');
-const privacyCloseBtn = privacy.querySelector('.modalCloseBtn');
+const closeBtns = {
+  privacy: modals.privacy.querySelector('.modalCloseBtn'),
+  conditions: modals.conditions.querySelector('.modalCloseBtn'),
+  feedback: modals.feedback.querySelector('.modalCloseBtn'),
+};
 
-privacyOpenBtn.addEventListener('click', (event) => {
-  privacy.classList.remove('modal--hidden'); // Show the modal
-});
+// Define open and close functions
+const openModal = (modal) => {
+  modal.classList.remove('modal--hidden');
 
-privacyCloseBtn.addEventListener('click', () => {
-  privacy.classList.add('modal--hidden'); // Hide the modal
-});
+  // Get the modal dialog element
+  const modalDialog = modal.querySelector('.dialog');
 
-/* Handle privacy policy modal*/
+  // Add event listener for outside clicks (on document body)
+  document.body.addEventListener('click', (event) => {
+    if (!modalDialog.contains(event.target)) {
+      closeModal(modal);
+    }
+  });
 
-const conditions = document.getElementById('terms-conditions');
-const conditionsOpenBtn = document.getElementById('open-conditions');
-const conditionsCloseBtn = conditions.querySelector('.modalCloseBtn');
+  // Add event listener for escape key press
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeModal(modal);
+    }
+  });
+};
 
-conditionsOpenBtn.addEventListener('click', (event) => {
-  conditions.classList.remove('modal--hidden'); // Show the modal
-});
+const closeModal = (modal) => {
+  modal.classList.add('modal--hidden');
 
-conditionsCloseBtn.addEventListener('click', () => {
-  conditions.classList.add('modal--hidden'); // Hide the modal
-});
+  // Remove event listeners when modal is closed (optional for performance)
+  document.body.removeEventListener('click', (event) => {
+    if (!modalDialog.contains(event.target)) {
+      closeModal(modal);
+    }
+  });
+  document.removeEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeModal(modal);
+    }
+  });
+};
 
-/* Handle feedback modal*/
+// Handle modal open/close events (using a loop for cleaner syntax)
+for (const modalName in modals) {
+  const modal = modals[modalName];
+  const openBtn = openBtns[modalName];
+  const closeBtn = closeBtns[modalName];
 
-const feedback = document.getElementById('feedback-form');
-const feedbackOpenBtn = document.getElementById('open-feedback');
-const feedbackCloseBtn = feedback.querySelector('.modalCloseBtn');
-
-feedbackOpenBtn.addEventListener('click', (event) => {
-  feedback.classList.remove('modal--hidden'); // Show the modal
-});
-
-feedbackCloseBtn.addEventListener('click', () => {
-  feedback.classList.add('modal--hidden'); // Hide the modal
-});
-
-/* Handle hash fragments in URL*/
-
-const hash = window.location.hash;
-
-if (hash === '#privacy-policy') {
-  privacy.classList.remove('modal--hidden'); // Show the modal
+  openBtn.addEventListener('click', () => openModal(modal));
+  closeBtn.addEventListener('click', () => closeModal(modal));
 }
 
-if (hash === '#feedback-form') {
-  feedback.classList.remove('modal--hidden'); // Show the modal
-}
+// Handle hash fragments in URL
+const handleHash = () => {
+  const hash = window.location.hash;
 
-if (hash === '#terms-conditions') {
-  conditions.classList.remove('modal--hidden'); // Show the modal
-}
+  if (hash === '#privacy-policy') {
+    openModal(modals.privacy);
+  } else if (hash === '#terms-conditions') {
+    openModal(modals.conditions);
+  } else if (hash === '#feedback-form') {
+    openModal(modals.feedback);
+  }
+};
 
+handleHash(); // Call initially to handle existing hash
+window.addEventListener('hashchange', handleHash); // Listen for hash changes
