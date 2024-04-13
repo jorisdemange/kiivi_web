@@ -92,7 +92,12 @@
       <div class="overlay"></div>
       <pre class="dialog">
         <h2>Give us some feedback!</h2>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="feedback" method="POST" data-netlify="true" netlify-honeypot="honey-field">
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="honey-field" />
+            </label>
+          </p>
           <label for="name">Name <span class="mini">(Optional)</span></label>
           <input type="text" name="name">
           <label for="email">Email <span class="mini">(Optional)</span></label>
