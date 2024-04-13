@@ -1443,10 +1443,12 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 15px;
+  font-family: inherit;
 }
 
 #feedback-form textarea {
   resize: vertical;
+  font-family: inherit;
 }
 
 #feedback-form .action-wrapper {
