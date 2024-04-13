@@ -1363,6 +1363,9 @@ Modals
 
 .modal h2 {
   font-size: 2.5rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  font-style: normal;
   margin-bottom: 28px;
 }
 
