@@ -1191,7 +1191,7 @@
     delay: 0,
     replay: false,
   });
-  
+
   onvisible.add("#buttons05", {
     style: "fade-right",
     speed: 1000,
@@ -1224,56 +1224,59 @@ Modals
 
 // Get modal elements
 const modals = {
-  privacy: document.getElementById('privacy-policy'),
-  conditions: document.getElementById('terms-conditions'),
-  feedback: document.getElementById('feedback-form'),
+  tietosuojalauseke: document.querySelector("#tietosuojalauseke"),
+  privacy: document.getElementById("privacy-policy"),
+  conditions: document.getElementById("terms-conditions"),
+  feedback: document.getElementById("feedback-form"),
 };
 
 const openBtns = {
-  privacy: document.getElementById('open-privacy'),
-  conditions: document.getElementById('open-conditions'),
-  feedback: document.getElementById('open-feedback'),
+  tietosuojalauseke: document.querySelector("#open-tietosuojalauseke"),
+  privacy: document.getElementById("open-privacy"),
+  conditions: document.getElementById("open-conditions"),
+  feedback: document.getElementById("open-feedback"),
 };
 
 const closeBtns = {
-  privacy: modals.privacy.querySelector('.modalCloseBtn'),
-  conditions: modals.conditions.querySelector('.modalCloseBtn'),
-  feedback: modals.feedback.querySelector('.modalCloseBtn'),
+  tietosuojalauseke: modals.tietosuojalauseke.querySelector(".modalCloseBtn"),
+  privacy: modals.privacy.querySelector(".modalCloseBtn"),
+  conditions: modals.conditions.querySelector(".modalCloseBtn"),
+  feedback: modals.feedback.querySelector(".modalCloseBtn"),
 };
 
 // Define open and close functions
 const openModal = (modal) => {
-  modal.classList.remove('modal--hidden');
+  modal.classList.remove("modal--hidden");
 
   // Get the modal dialog element
-  const modalDialog = modal.querySelector('.dialog');
+  const modalDialog = modal.querySelector(".dialog");
 
   // Add event listener for outside clicks (on document body)
-  document.body.addEventListener('click', (event) => {
+  document.body.addEventListener("click", (event) => {
     if (!modalDialog.contains(event.target)) {
       closeModal(modal);
     }
   });
 
   // Add event listener for escape key press
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
       closeModal(modal);
     }
   });
 };
 
 const closeModal = (modal) => {
-  modal.classList.add('modal--hidden');
+  modal.classList.add("modal--hidden");
 
   // Remove event listeners when modal is closed (optional for performance)
-  document.body.removeEventListener('click', (event) => {
+  document.body.removeEventListener("click", (event) => {
     if (!modalDialog.contains(event.target)) {
       closeModal(modal);
     }
   });
-  document.removeEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+  document.removeEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
       closeModal(modal);
     }
   });
@@ -1285,22 +1288,27 @@ for (const modalName in modals) {
   const openBtn = openBtns[modalName];
   const closeBtn = closeBtns[modalName];
 
-  openBtn.addEventListener('click', () => openModal(modal));
-  closeBtn.addEventListener('click', () => closeModal(modal));
+  openBtn.addEventListener("click", () => openModal(modal));
+  closeBtn.addEventListener("click", () => closeModal(modal));
 }
 
 // Handle hash fragments in URL
 const handleHash = () => {
   const hash = window.location.hash;
 
-  if (hash === '#privacy-policy') {
-    openModal(modals.privacy);
-  } else if (hash === '#terms-conditions') {
-    openModal(modals.conditions);
-  } else if (hash === '#feedback-form') {
-    openModal(modals.feedback);
+  switch (hash) {
+    case "#tietosuojalauseke":
+      return openModal(modals.tietosuojalauseke);
+    case "#privacy-policy":
+      return openModal(modals.privacy);
+    case "#terms-conditions":
+      return openModal(modals.conditions);
+    case "#feedback-form":
+      return openModal(modals.feedback);
+    default:
+      return;
   }
 };
 
 handleHash(); // Call initially to handle existing hash
-window.addEventListener('hashchange', handleHash); // Listen for hash changes
+window.addEventListener("hashchange", handleHash); // Listen for hash changes
