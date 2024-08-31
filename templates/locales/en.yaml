@@ -1,4 +1,5 @@
 ---
+thisLanguage: en
 meta:
   title: "Kiivi | find recipes, faster than ever"
   description: "Save time planning meals with Kiivi, the AI-powered app that creates personalized plans in minutes! Perfect for busy families and home chefs. Download Kiivi and eat healthy, stress-free!"
@@ -31,10 +32,10 @@ buttons:
   googlePlay: "Get it on Google Play"
 
 links:
-  privacyFinnish: "Privacy policy (in Finnish)"
-  privacyEnglish: "Privacy policy (in English)"
+  privacy: "Privacy policy"
   terms: "Terms & conditions"
   feedback: "&#129303; Give feedback"
+  close: "Close"
 
 images:
   screenshot: "Screenshot of Kiivi, your AI-powered home chef assistant"

@@ -1,0 +1,42 @@
+---
+thisLanguage: et
+meta:
+  title: "Kiivi | leia retsepte kiiremini kui kunagi varem"
+  description: "Säästa aega toidukordade planeerimisel Kiiviga, tehisintellektil põhineva rakendusega, mis loob personaalseid plaane minutitega! Ideaalne kiiretele peredele ja kodukokakadele. Laadi alla Kiivi ja söö tervislikult, stressivabalt!"
+
+available: "Saadaval keeltes"
+
+languages:
+  finnish: "Soome"
+  swedish: "Rootsi"
+  english: "Inglise"
+  estonian: "Eesti"
+
+pitch: >
+  Planeeri oma toidukordi
+  kiiremini kui kunagi varem
+
+description:
+  part1: >
+    Kas sul on raskusi <strong>tervislike retseptide</strong> leidmise ja
+    <strong>oma kiire pere toidukordade planeerimisega</strong>? Kiivi on
+    <strong>tehisintellektil põhinev toidukordade planeerimise rakendus</strong>, mis võtab toiduvalmistamisest stressi ära.
+  part2: >
+    Kiivi arvestab sinu eelistuste, toitumisvajaduste ja
+    <strong>juba olemasolevate koostisainetega</strong>. Kiivi loob sekunditega
+    <strong>personaalseid toiduplaane</strong> maitsvate
+    <strong>just sulle loodud retseptidega</strong>.
+  part3: "Laadi Kiivi alla täna, sinu täiuslik <strong>kodukoka abiline</strong>!"
+
+buttons:
+  appStore: "Laadi Kiivi alla App Store'ist"
+  googlePlay: "Hangi see Google Play'st"
+
+links:
+  privacy: "Privaatsuspoliitika"
+  terms: "Tingimused"
+  feedback: "&#129303; Anna tagasisidet"
+  close: "Sulge"
+
+images:
+  screenshot: "Kuvatõmmis Kiivist, sinu tehisintellektil põhinevast kodukoka abilisest"

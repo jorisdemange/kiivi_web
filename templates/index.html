@@ -110,7 +110,7 @@
         <h2>Tietosuojalauseke</h2>
         <zero-md src="assets/tietosuojalauseke.md" class="md-wrapper"></zero-md>
         <nav>
-          <a href="#" class="modalCloseBtn" >Close</a>
+          <a href="#" class="modalCloseBtn" data-t="links.close">Close</a>
         </nav>
       </pre>
     </div>
@@ -118,10 +118,10 @@
     <div id="privacy-policy" class="policy modal modal--hidden">
       <div class="overlay"></div>
       <pre class="dialog">
-        <h2>Privacy policy</h2>
-        <zero-md src="assets/privacy-policy.md" class="md-wrapper"></zero-md>
+        <h2 data-t="links.privacy">Privacy policy</h2>
+        <zero-md data-attr-t data-attr-t-interpolate src="assets/docs/privacy-policy-{{thisLanguage}}.md" class="md-wrapper"></zero-md>
         <nav>
-          <a href="#" class="modalCloseBtn" >Close</a>
+          <a href="#" class="modalCloseBtn" data-t="links.close">Close</a>
         </nav>
       </pre>
     </div>
@@ -132,7 +132,7 @@
         <h2>Terms and conditions</h2>
         <zero-md src="assets/terms-conditions.md" class="md-wrapper"></zero-md>
         <nav>
-          <a href="#" class="modalCloseBtn" >Close</a>
+          <a href="#" class="modalCloseBtn" data-t="links.close">Close</a>
         </nav>
       </pre>
     </div>
@@ -222,13 +222,10 @@
                   </ul>
                   <ul id="modal-links" class="links">
                     <li>
-                      <a href="#tietosuojalauseke" id="open-tietosuojalauseke" data-t="links.privacyFinnish"> Privacy policy (in Finnish)</a>
+                      <a href="#privacy-policy" id="open-privacy" data-t="links.privacy">Privacy policy</a>
                     </li>
                     <li>
-                      <a href="#privacy-policy" id="open-privacy" data-t="links.privacyEnglish"> Privacy policy (in English)</a>
-                    </li>
-                    <li>
-                      <a href="#terms-conditions" id="open-conditions" data-t="links.terms"> Terms &amp; conditions</a>
+                      <a href="#terms-conditions" id="open-conditions" data-t="links.terms">Terms &amp; conditions</a>
                     </li>
                     <li>
                       <a href="#feedback-form" id="open-feedback" data-t="links.feedback">&#129303; Give feedback</a>

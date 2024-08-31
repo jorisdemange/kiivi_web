@@ -1,4 +1,5 @@
 ---
+thisLanguage: fi
 meta:
   title: "Kiivi | löydä reseptit nopeammin kuin koskaan"
   description: "Säästä aikaa aterioiden suunnittelussa Kiivin avulla, tekoälyn voimalla toimivalla sovelluksella, joka luo personoituja suunnitelmia minuuteissa! Täydellinen kiireisille perheille ja kotikokeille. Lataa Kiivi ja syö terveellisesti, stressittömästi!"
@@ -31,10 +32,10 @@ buttons:
   googlePlay: "Hanki se Google Playsta"
 
 links:
-  privacyFinnish: "Tietosuojaseloste (suomeksi)"
-  privacyEnglish: "Tietosuojaseloste (englanniksi)"
+  privacy: "Tietosuojaseloste"
   terms: "Käyttöehdot"
   feedback: "&#129303; Anna palautetta"
+  close: "Sulje"
 
 images:
   screenshot: "Kuvankaappaus Kiivistä, tekoälyllä toimivasta kotikokki-apulaisestasi"

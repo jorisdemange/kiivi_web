@@ -1,0 +1,42 @@
+---
+thisLanguage: sv
+meta:
+  title: "Kiivi | hitta recept snabbare än någonsin"
+  description: "Spara tid på måltidsplanering med Kiivi, den AI-drivna appen som skapar personliga planer på minuter! Perfekt för upptagna familjer och hemkockar. Ladda ner Kiivi och ät hälsosamt, stressfritt!"
+
+available: "Tillgänglig på"
+
+languages:
+  finnish: "Finska"
+  swedish: "Svenska"
+  english: "Engelska"
+  estonian: "Estniska"
+
+pitch: >
+  Planera dina måltider
+  snabbare än någonsin
+
+description:
+  part1: >
+    Kämpar du med att hitta <strong>hälsosamma recept</strong> och
+    <strong>planera måltider för din upptagna familj</strong>? Kiivi är
+    <strong>den AI-drivna måltidsplaneringsappen</strong> som tar bort stressen från matlagningen.
+  part2: >
+    Kiivi tar hänsyn till dina preferenser, kostbehov och
+    <strong>ingredienser du redan har</strong> hemma. På bara några sekunder skapar Kiivi
+    <strong>personliga måltidsplaner</strong> med läckra
+    <strong>recept gjorda just för dig</strong>.
+  part3: "Ladda ner Kiivi idag, din perfekta <strong>hemmakocksassistent</strong>!"
+
+buttons:
+  appStore: "Ladda ner Kiivi på App Store"
+  googlePlay: "Hämta den på Google Play"
+
+links:
+  privacy: "Integritetspolicy"
+  terms: "Villkor"
+  feedback: "&#129303; Ge feedback"
+  close: "Stäng"
+
+images:
+  screenshot: "Skärmdump av Kiivi, din AI-drivna hemmakocksassistent"
