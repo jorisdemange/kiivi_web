@@ -15,7 +15,7 @@
 
           function redirectToLocale() {
               const preferredLang = getPreferredLanguage();
-              const supportedLanguages = ['en', 'fi']; // Add more languages if needed
+              const supportedLanguages = ['en', 'fi', 'sv', 'et']; // Add more languages if needed
 
               // Check if user is on the root page and needs to be redirected
               if (supportedLanguages.includes(preferredLang)) {
@@ -26,7 +26,7 @@
                       // Redirect to the localized page if needed
                       if (preferredLang !== 'en') {
                           // Avoid infinite redirection loop by checking for the path
-                          window.location.href = `/${preferredLang}/index.html`;
+                          window.location.href = `/${preferredLang}/`;
                       }
                   }
               }
