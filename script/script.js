@@ -1297,8 +1297,6 @@ const handleHash = () => {
   const hash = window.location.hash;
 
   switch (hash) {
-    case "#tietosuojalauseke":
-      return openModal(modals.tietosuojalauseke);
     case "#privacy-policy":
       return openModal(modals.privacy);
     case "#terms-conditions":
