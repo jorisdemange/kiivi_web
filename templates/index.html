@@ -2,9 +2,41 @@
 <html lang="en">
   <head>
     <title>Kiivi | find recipes, faster than ever</title>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <!-- LANGUAGE DETECTION-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          function getPreferredLanguage() {
+              const userLang = navigator.language || navigator.userLanguage;
+              return userLang ? userLang.split('-')[0] : 'en'; // Extract language code
+          }
+
+          function redirectToLocale() {
+              const preferredLang = getPreferredLanguage();
+              const supportedLanguages = ['en', 'fi']; // Add more languages if needed
+
+              // Check if user is on the root page and needs to be redirected
+              if (supportedLanguages.includes(preferredLang)) {
+                  const currentPath = window.location.pathname;
+                  
+                  // Check if the current path is the root path
+                  if (currentPath === '/' || currentPath === '/index.html') {
+                      // Redirect to the localized page if needed
+                      if (preferredLang !== 'en') {
+                          // Avoid infinite redirection loop by checking for the path
+                          window.location.href = `/${preferredLang}/index.html`;
+                      }
+                  }
+              }
+          }
+
+          redirectToLocale();
+      });
+  </script> 
+    <!-- LANGUAGE DETECTION-->
+
     <meta name="color-scheme" content="light only" />
     <meta
       name="description"
