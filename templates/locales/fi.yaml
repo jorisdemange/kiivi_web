@@ -1,2 +1,40 @@
 ---
-available: tutustulutu
+meta:
+  title: "Kiivi | löydä reseptit nopeammin kuin koskaan"
+  description: "Säästä aikaa aterioiden suunnittelussa Kiivin avulla, tekoälyn voimalla toimivalla sovelluksella, joka luo personoituja suunnitelmia minuuteissa! Täydellinen kiireisille perheille ja kotikokeille. Lataa Kiivi ja syö terveellisesti, stressittömästi!"
+
+available: "Saatavilla kielillä"
+
+languages:
+  finnish: "Suomi"
+  swedish: "Ruotsi"
+  english: "Englanti"
+
+pitch: >
+  Suunnittele ateriasi
+  nopeammin kuin koskaan
+
+description:
+  part1: >
+    Onko sinulla vaikeuksia löytää <strong>terveellisiä reseptejä</strong> ja
+    <strong>suunnitella aterioita kiireiselle perheellesi</strong>? Kiivi on
+    <strong>tekoälyllä toimiva ateriasuunnittelusovellus</strong>, joka poistaa ruoanlaiton stressin.
+  part2: >
+    Kiivi huomioi mieltymyksesi, ruokavaliotarpeesi ja
+    <strong>ainesosat, joita sinulla on jo</strong> käytettävissä. Kiivi luo sekunneissa
+    <strong>personoituja ateriasuunnitelmia</strong> herkullisilla
+    <strong>juuri sinulle tehdyillä resepteillä</strong>.
+  part3: "Lataa Kiivi tänään, täydellinen <strong>kotikokki-apulaisesi</strong>!"
+
+buttons:
+  appStore: "Lataa Kiivi App Storesta"
+  googlePlay: "Hanki se Google Playsta"
+
+links:
+  privacyFinnish: "Tietosuojaseloste (suomeksi)"
+  privacyEnglish: "Tietosuojaseloste (englanniksi)"
+  terms: "Käyttöehdot"
+  feedback: "&#129303; Anna palautetta"
+
+images:
+  screenshot: "Kuvankaappaus Kiivistä, tekoälyllä toimivasta kotikokki-apulaisestasi"
