@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kiivi | find recipes, faster than ever</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light only" />
+    <meta
+      name="description"
+      content="Save time planning meals with Kiivi, the AI-powered app that creates personalized plans in minutes! Perfect for busy families and home chefs. Download Kiivi and eat healthy, stress-free!"
+    />
+    <meta property="og:site_name" content="Kiivi | find recipes, faster than ever" />
+    <meta property="og:title" content="Kiivi | find recipes, faster than ever" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Save time planning meals with Kiivi, the AI-powered app that creates personalized plans in minutes! Perfect for busy families and home chefs. Download Kiivi and eat healthy, stress-free!"
+    />
+    <meta property="og:image" content="https://kiivi.app/assets/images/og_image.png" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:url" content="https://kiivi.app" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <!-- 
+      Smart App Banners, implement after app launch
+      <meta name="apple-itunes-app" content="app-id=myAppStoreID, app-argument=myURL">
+    -->
+
+    <link rel="canonical" href="https://kiivi.app" />
+
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" sizes="any" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" sizes="192x192" href="android-chrome-192x192.png" />
+    <link rel="icon" sizes="512x512" href="android-chrome-512x512.png" />
+    <!-- FAVICON -->
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONTS -->
+
+    <base href="/">
+  </head>
+  <body class="is-loading">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 40 40"
+      display="none"
+      width="0"
+      height="0"
+    >
+      <symbol id="icon-80dc50be409b6c0a58c1f62335c07e7d" viewBox="0 0 40 40">
+        <path
+          d="M12.9,32.4L25.3,20L13,7.6c-0.2-0.2-0.2-0.5,0-0.7l1.6-1.6c0.2-0.2,0.5-0.2,0.7,0L29.8,20L15.1,34.6c-0.2,0.2-0.5,0.2-0.7,0 l-1.6-1.6C12.7,32.9,12.7,32.6,12.9,32.4z"
+        />
+      </symbol>
+    </svg>
+
+    <div id="tietosuojalauseke" class="policy modal modal--hidden">
+      <div class="overlay"></div>
+      <pre class="dialog">
+        <h2>Tietosuojalauseke</h2>
+        <zero-md src="assets/tietosuojalauseke.md" class="md-wrapper"></zero-md>
+        <nav>
+          <a href="#" class="modalCloseBtn" >Close</a>
+        </nav>
+      </pre>
+    </div>
+
+    <div id="privacy-policy" class="policy modal modal--hidden">
+      <div class="overlay"></div>
+      <pre class="dialog">
+        <h2>Privacy policy</h2>
+        <zero-md src="assets/privacy-policy.md" class="md-wrapper"></zero-md>
+        <nav>
+          <a href="#" class="modalCloseBtn" >Close</a>
+        </nav>
+      </pre>
+    </div>
+
+    <div id="terms-conditions" class="conditions modal modal--hidden">
+      <div class="overlay"></div>
+      <pre class="dialog">
+        <h2>Terms and conditions</h2>
+        <zero-md src="assets/terms-conditions.md" class="md-wrapper"></zero-md>
+        <nav>
+          <a href="#" class="modalCloseBtn" >Close</a>
+        </nav>
+      </pre>
+    </div>
+
+    <div id="feedback-form" class="feedback modal modal--hidden">
+      <div class="overlay"></div>
+      <pre class="dialog">
+        <h2>Give us some feedback!</h2>
+        <form name="feedback" method="POST" data-netlify="true" netlify-honeypot="honey-field">
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="honey-field" />
+            </label>
+          </p>
+          <label for="name">Name <span class="mini">(Optional)</span></label>
+          <input type="text" name="name">
+          <label for="email">Email <span class="mini">(Optional)</span></label>
+          <input type="text" name="email">
+          <label for="feedback">Your Feedback</label>
+          <textarea name="feedback" rows="5" cols="30" required></textarea>
+          <div class="action-wrapper">
+            <button class="modalCloseBtn btn--text" >Close</button>
+            <button type="submit" class="btn--green">Submit</button>
+          </div>
+        </form>
+      </pre>
+    </div>
+
+    <div id="wrapper">
+      <div id="main">
+        <div class="inner">
+          <div id="container29" class="container columns">
+            <div class="wrapper">
+              <div class="inner">
+                <div>
+                  <div class="logo-lang">
+                    <img src="assets/kiivi-logotype.svg" alt="Kiivi meal planning app logo" id="kiivi-logotype" />
+                    <div class="lang-sticker">
+                      <span data-t="available">Available in</span>
+                      <ul class="rotate-3">
+                        <li>Finnish</li>
+                        <li>Swedish</li>
+                        <li>English</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <h2 class="pitch" id="text32">
+                    <span class="p">
+                      <em
+                        >Plan your meals,<br />
+                        faster than ever</em
+                      >
+                    </span>
+                  </h2>
+                  <p class="description" id="text29">
+                    <span class="p"
+                      >Struggling to find <strong>healthy recipes</strong> and
+                      <strong>plan meals for your busy family</strong>? Kiivi is the
+                      <strong>AI-powered meal planning app</strong> that takes the stress out of cooking.</span
+                    >
+                    <span class="p"
+                      >Kiivi considers your preferences, dietary needs, and
+                      <strong>ingredients you already have</strong> on hand. In just seconds, Kiivi creates
+                      <strong>personalized meal plans</strong> with delicious
+                      <strong>recipes made just for you</strong>.</span
+                    >
+                    <span class="p">Download Kiivi today, your perfect <strong>home chef assistant</strong>!</span>
+                  </p>
+
+                  <ul id="buttons05" class="buttons">
+                    <li>
+                      <a href="https://apps.apple.com/fi/app/kiivi/id6476015425" class="button">
+                        <img
+                          src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                          alt="Download Kiivi on the App Store"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://play.google.com/store/apps/details?id=fi.safkain.app" class="button">
+                        <img src="assets/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+                      </a>
+                    </li>
+                  </ul>
+                  <ul id="modal-links" class="links">
+                    <li>
+                      <a href="#tietosuojalauseke" id="open-tietosuojalauseke"> Privacy policy (in Finnish)</a>
+                    </li>
+                    <li>
+                      <a href="#privacy-policy" id="open-privacy"> Privacy policy (in English)</a>
+                    </li>
+                    <li>
+                      <a href="#terms-conditions" id="open-conditions"> Terms &amp; conditions</a>
+                    </li>
+                    <li>
+                      <a href="#feedback-form" id="open-feedback">&#129303; Give feedback</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div id="image02" class="image full">
+                    <span class="frame deferred"
+                      ><img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA4NTYgMTI3OCIgd2lkdGg9Ijg1NiIgaGVpZ2h0PSIxMjc4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cmVjdCBmaWxsPSJ0cmFuc3BhcmVudCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg%3D%3D"
+                        data-src="assets/images/screenshot-large.png"
+                        alt="Screenshot of Kiivi, your AI-powered home chef assistant"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
